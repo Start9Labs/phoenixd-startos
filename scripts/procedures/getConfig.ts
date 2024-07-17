@@ -8,7 +8,7 @@ export const getConfig: T.ExpectedExports.getConfig = compat.getConfig({
         subtype: "package",
         "package-id": "phoenixd",
         target: "tor-address",
-        interface: "phoenixd"
+        interface: "main"
     },
     "auto-liquidity": {
         name: "Auto Liquidity",
