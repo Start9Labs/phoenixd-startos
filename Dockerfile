@@ -20,6 +20,8 @@ RUN mkdir -p /target && tar --strip-components=1 -xvf /phoenixd/build/distributi
 
 FROM eclipse-temurin:21-jre-alpine AS final
 
+RUN apk update && apk add --no-cache nginx yq && rm -rf /tmp/* /var/cache/apk/* /var/tmp/*
+
 # Copy entrypoint, scripts and prepare convinient symbolic links 
 ADD ./docker_entrypoint.sh /usr/local/bin/docker_entrypoint.sh
 ADD ./scripts/check.sh /usr/local/bin/check.sh

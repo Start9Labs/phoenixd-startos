@@ -8,7 +8,6 @@ _term() {
 }
 
 CONFIG_FILE="/root/.phoenix/start9/config.yaml"
-# PASSWD=$(grep 'http-password' /root/.phoenix/phoenix.conf | cut -d '=' -f 2)
 SEED=$(cat /root/.phoenix/seed.dat)
 
 # Parse configuration values using yq
