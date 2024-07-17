@@ -51,7 +51,7 @@ data:
   12 Words Seed Phrase:
     type: string
     value: $SEED
-    description: WARNING: This is your 12 word mnemonic seed phrase. Keep it secret, keep it safe!
+    description: "<b>WARNING:</b> This is your 12 word mnemonic seed phrase.</br>Keep it secret, keep it safe!"
     copyable: true
     qr: false
     masked: true
