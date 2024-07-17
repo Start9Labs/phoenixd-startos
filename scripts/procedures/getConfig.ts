@@ -12,7 +12,7 @@ export const getConfig: T.ExpectedExports.getConfig = compat.getConfig({
     },
     "auto-liquidity": {
         name: "Auto Liquidity",
-        description: "Amount automatically requested when inbound liquidity is needed",
+        description: "Amount automatically requested when inbound liquidity is needed (default: 2m)",
         type: "enum",
         values: ["off", "2m", "5m", "10m"],
         "value-names": {
@@ -23,17 +23,19 @@ export const getConfig: T.ExpectedExports.getConfig = compat.getConfig({
         },
         default: "2m"
     },
-    "max-absolute-fee": {
-        name: "Max Absolute Fee",
-        description: "Max absolute fee for on-chain operations. Includes mining fee and service fee for auto-liquidity.",
+    "max-mining-fee": {
+        name: "Max Mining Fee",
+        description: "Max mining fee for on-chain operations, in satoshis. Valid range is 5000 to 200000 satoshis.",
         type: "number",
         nullable: false,
-        default: 0.02,
-        range: "[0,1]"
+        default: 10000,
+        range: "[5000,200000]",
+        integral: true,
+        units: "satoshis"
     },
     "max-fee-credit": {
         name: "Max Fee Credit",
-        description: "Max fee credit, if reached payments will be rejected.",
+        description: "Max fee credit, if reached payments will be rejected (default: 100k)",
         type: "enum",
         values: ["off", "50k", "100k"],
         "value-names": {
@@ -45,7 +47,7 @@ export const getConfig: T.ExpectedExports.getConfig = compat.getConfig({
     },
     chain: {
         name: "Chain",
-        description: "Bitcoin chain to use",
+        description: "Bitcoin chain to use (default: mainnet)",
         type: "enum",
         values: ["mainnet", "testnet"],
         "value-names": {
@@ -54,7 +56,7 @@ export const getConfig: T.ExpectedExports.getConfig = compat.getConfig({
         },
         default: "mainnet"
     },
-    "http-password": {
+    "http-api-pass": {
         name: "HTTP API Password",
         description: "Password for the phoenixd HTTP API. This is used to authenticate API requests.",
         type: "string",
@@ -70,14 +72,14 @@ export const getConfig: T.ExpectedExports.getConfig = compat.getConfig({
         warning: "Changing this password will require updating any services or clients that connect to phoenixd's HTTP API.",
     },
     verbosity: {
-        name: "Verbosity",
-        description: "Verbosity level",
+        name: "Logs Verbosity",
+        description: "Logs verbosity level (default: prints high-level info to the console)",
         type: "enum",
-        values: ["silent", "verbose"],
+        values: ["default", "verbose"],
         "value-names": {
-            "silent": "Silent",
+            "default": "Default",
             "verbose": "Verbose"
         },
-        default: "verbose"
+        default: "default"
     }
 });
