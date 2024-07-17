@@ -2,7 +2,8 @@ id: phoenixd
 title: "phoenixd"
 version: 0.1.4
 release-notes: |
-  - Initial StartOS release
+  - Add basic configuration
+  - Add properties
 license: Apache-2.0 
 wrapper-repo: "https://github.com/Start9Labs/phoenixd-startos"
 upstream-repo: "https://github.com/ACINQ/phoenixd"
@@ -42,8 +43,13 @@ health-checks:
     mounts: {}
     io-format: yaml
     inject: true
-config: ~
-properties: ~
+config:
+  get:
+    type: script
+  set:
+    type: script
+properties:
+  type: script
 volumes:
   main:
     type: data

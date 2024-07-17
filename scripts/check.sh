@@ -1,5 +1,5 @@
 #!/bin/sh
-chown phoenix:phoenix -R /phoenix
+# chown phoenix:phoenix -R /phoenix
 CHCK='phoenix-cli getinfo >/dev/null 2>&1'
 
 eval "$CHCK"
