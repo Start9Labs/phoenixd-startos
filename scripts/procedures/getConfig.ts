@@ -55,11 +55,19 @@ export const getConfig: T.ExpectedExports.getConfig = compat.getConfig({
         default: "mainnet"
     },
     "http-password": {
-        name: "HTTP Password",
-        description: "Password for the http api",
+        name: "HTTP API Password",
+        description: "Password for the phoenixd HTTP API. This is used to authenticate API requests.",
         type: "string",
-        nullable: true,
-        masked: true
+        nullable: false,
+        masked: true,
+        copyable: true,
+        default: {
+            charset: "a-f,0-9",
+            len: 64,
+        },
+        pattern: "^[a-f0-9]{64}$",
+        "pattern-description": "Must be a 64-character lowercase hexadecimal string.",
+        warning: "Changing this password will require updating any services or clients that connect to phoenixd's HTTP API.",
     },
     verbosity: {
         name: "Verbosity",
