@@ -56,6 +56,8 @@ data:
     qr: false
     masked: true
 BTC
+# Update passowrd for CLI usage
+echo -e "\nhttp-password=${HTTP_PASSWORD}" > /root/.phoenix/phoenix.conf
 
 # Start phoenixd with all prepared options
 eval $PHOENIXD_CMD &
