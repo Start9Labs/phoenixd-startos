@@ -7,10 +7,8 @@ _term() {
   kill -TERM "$phoenixd_process" 2>/dev/null
 }
 
-CONFIG_FILE="/root/.phoenix/start9/config.yaml"
-SEED=$(cat /root/.phoenix/seed.dat)
-
 # Parse configuration values using yq
+CONFIG_FILE="/root/.phoenix/start9/config.yaml"
 AUTO_LIQUIDITY=$(yq '.auto-liquidity' $CONFIG_FILE)
 MAX_MINING_FEE=$(yq '.max-mining-fee' $CONFIG_FILE)
 MAX_FEE_CREDIT=$(yq '.max-fee-credit' $CONFIG_FILE)
@@ -21,6 +19,14 @@ TOR_ADDRESS=$(yq '.tor-address' $CONFIG_FILE)
 
 # Prepare phoenixd command with configuration options
 PHOENIXD_CMD="/phoenix/bin/phoenixd --agree-to-terms-of-service --http-bind-ip 0.0.0.0"
+
+if [ ! -f /root/.phoenix/seed.dat ]; then
+  echo "Seed not found."
+  PHOENIXD_CMD="/phoenix/bin/phoenixd --agree-to-terms-of-service --http-bind-ip 0.0.0.0"
+  timeout 5s $PHOENIXD_CMD --silent
+fi
+
+SEED=$(cat /root/.phoenix/seed.dat)
 
 # Add options based on config values
 [ -n "$AUTO_LIQUIDITY" ] && PHOENIXD_CMD="$PHOENIXD_CMD --auto-liquidity=$AUTO_LIQUIDITY"
