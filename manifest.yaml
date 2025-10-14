@@ -1,6 +1,6 @@
 id: phoenixd
 title: "phoenixd"
-version: 0.1.4
+version: 0.6.3
 release-notes: |
   - Initial StartOS release
 license: Apache-2.0 
