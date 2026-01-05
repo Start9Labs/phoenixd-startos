@@ -1,10 +1,10 @@
 id: phoenixd
 title: "phoenixd"
-version: 0.3.0
+version: 0.6.3
 release-notes: |
   - Add basic configuration
   - Add properties
-license: Apache-2.0 
+license: Apache-2.0
 wrapper-repo: "https://github.com/Start9Labs/phoenixd-startos"
 upstream-repo: "https://github.com/ACINQ/phoenixd"
 support-site: "https://github.com/ACINQ/phoenixd/issues"
