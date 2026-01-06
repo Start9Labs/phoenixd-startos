@@ -23,17 +23,21 @@ sudo podman exec -it phoenixd.embassy bash
 You can use `phoenix-cli` to interact with the daemon. Here are some examples:
 
 **Show basic info about your node**
+
 ```sh
 phoenix-cli getinfo
 ```
 
 **Create a Lightning invoice**
+
 ```sh
 phoenix-cli createinvoice \
     --description "my first invoice" \
     --amountSat 12345
 ```
+
 **Send to a bitcoin address**
+
 ```sh
 phoenix-cli sendtoaddress \
     --address tb1q2qlmy0t2g33tjgujr6h53dxmypuf8qps9jnv9q \
