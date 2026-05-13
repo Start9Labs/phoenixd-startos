@@ -9,7 +9,6 @@ export const manifest = setupManifest({
   upstreamRepo: 'https://github.com/ACINQ/phoenixd/',
   marketingUrl: 'https://phoenix.acinq.co/server/',
   donationUrl: null,
-  docsUrls: ['https://phoenix.acinq.co/server'],
   description: i18n.description,
   volumes: ['main'],
   images: {
