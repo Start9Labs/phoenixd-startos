@@ -5,7 +5,7 @@ export const manifest = setupManifest({
   id: 'phoenixd',
   title: 'phoenixd',
   license: 'MIT',
-  packageRepo: 'https://github.com/Start9Labs/phoenixd-startos',
+  packageRepo: 'https://github.com/Start9-Community/phoenixd-startos',
   upstreamRepo: 'https://github.com/ACINQ/phoenixd/',
   marketingUrl: 'https://phoenix.acinq.co/server/',
   donationUrl: null,
