@@ -158,6 +158,6 @@ volumes:
 ports:
   api: 9740
 dependencies: none
-startos_managed_env_vars: []
+startos_managed_env_vars: none
 actions: none
 ```
