@@ -24,7 +24,7 @@ For a complete list of build options, see [Makefile](https://docs.start9.com/pac
 ## Updating the upstream version
 
 1. Apply the upstream bump per [UPDATING.md](./UPDATING.md).
-2. Update `version` and `releaseNotes` in the file under `startos/versions/`, renaming it to the new version string. A _new_ version file is only needed when the bump requires a migration, or when you want the old release notes preserved in git history — see [Versions](https://docs.start9.com/packaging/versions.html).
+2. Update `version` and `releaseNotes` in `startos/versions/current.ts` in place — the latest version always lives in `current.ts`; leave the `current` export and `index.ts` untouched. Add a _new_ version file under `startos/versions/` (and wire it into `index.ts`'s `other` array) only when the bump carries an `up`/`down` migration. See [Versions](https://docs.start9.com/packaging/versions.html).
 
 ## CI/CD
 
