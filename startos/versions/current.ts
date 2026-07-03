@@ -1,43 +1,13 @@
 import { IMPOSSIBLE, VersionInfo } from '@start9labs/start-sdk'
 
 export const current = VersionInfo.of({
-  version: '0.8.0:0',
+  version: '0.8.0:1',
   releaseNotes: {
-    en_US: `**Bumps**
-
-- phoenixd → 0.8.0
-
-**Internal**
-
-- start-sdk → 1.5.3`,
-    es_ES: `**Actualizaciones**
-
-- phoenixd → 0.8.0
-
-**Interno**
-
-- start-sdk → 1.5.3`,
-    de_DE: `**Aktualisierungen**
-
-- phoenixd → 0.8.0
-
-**Intern**
-
-- start-sdk → 1.5.3`,
-    pl_PL: `**Aktualizacje**
-
-- phoenixd → 0.8.0
-
-**Wewnętrzne**
-
-- start-sdk → 1.5.3`,
-    fr_FR: `**Mises à jour**
-
-- phoenixd → 0.8.0
-
-**Interne**
-
-- start-sdk → 1.5.3`,
+    en_US: 'Internal updates (start-sdk 2.0.x)',
+    es_ES: 'Actualizaciones internas (start-sdk 2.0.x)',
+    de_DE: 'Interne Aktualisierungen (start-sdk 2.0.x)',
+    pl_PL: 'Aktualizacje wewnętrzne (start-sdk 2.0.x)',
+    fr_FR: 'Mises à jour internes (start-sdk 2.0.x)',
   },
   migrations: {
     up: async ({ effects }) => {},

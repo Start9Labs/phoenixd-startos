@@ -12,7 +12,7 @@ export const main = sdk.setupMain(async ({ effects }) => {
 
   const mountpoint = '/phoenix/.phoenix'
 
-  const subcontainer = await sdk.SubContainer.of(
+  const subcontainer = sdk.SubContainer.of(
     effects,
     { imageId: 'phoenixd' },
     sdk.Mounts.of().mountVolume({
