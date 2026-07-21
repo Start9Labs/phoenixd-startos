@@ -13,7 +13,7 @@ export const manifest = setupManifest({
   volumes: ['main'],
   images: {
     phoenixd: {
-      source: { dockerTag: 'acinq/phoenixd:0.8.0' },
+      source: { dockerTag: 'acinq/phoenixd:0.9.0' },
       arch: ['x86_64', 'aarch64'],
     },
   },
