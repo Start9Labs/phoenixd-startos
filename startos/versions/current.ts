@@ -1,7 +1,7 @@
 import { IMPOSSIBLE, VersionInfo } from '@start9labs/start-sdk'
 
 export const current = VersionInfo.of({
-  version: '0.9.0:0',
+  version: '0.9.0:1',
   releaseNotes: {
     en_US: `Updated phoenixd to 0.9.0.
 
