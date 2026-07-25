@@ -34,11 +34,11 @@
 
 ## Image and Container Runtime
 
-| Property | Value |
-|----------|-------|
-| Image | `acinq/phoenixd` (upstream unmodified) |
-| Architectures | x86_64, aarch64 |
-| Entrypoint | Default upstream entrypoint |
+| Property      | Value                                  |
+| ------------- | -------------------------------------- |
+| Image         | `acinq/phoenixd` (upstream unmodified) |
+| Architectures | x86_64, aarch64                        |
+| Entrypoint    | Default upstream entrypoint            |
 
 **Startup order:** A `chown` one-shot sets ownership of the data directory to `phoenix:phoenix`, then the daemon starts.
 
@@ -46,8 +46,8 @@
 
 ## Volume and Data Layout
 
-| Volume | Mount Point | Purpose |
-|--------|-------------|---------|
+| Volume | Mount Point         | Purpose                               |
+| ------ | ------------------- | ------------------------------------- |
 | `main` | `/phoenix/.phoenix` | Wallet data, seed, channels, database |
 
 **Important:** The `main` volume contains your Lightning wallet seed and funds. Ensure backups are secure.
@@ -56,11 +56,11 @@
 
 ## Installation and First-Run Flow
 
-| Step | Upstream | StartOS |
-|------|----------|---------|
-| Installation | Download binary or Docker image | Install from marketplace or sideload `.s9pk` |
-| First start | Run `phoenixd` manually | Automatic via StartOS |
-| API password | Generated in `phoenix.conf` | Same — generated on first run, found in `phoenix.conf` |
+| Step         | Upstream                        | StartOS                                                |
+| ------------ | ------------------------------- | ------------------------------------------------------ |
+| Installation | Download binary or Docker image | Install from marketplace or sideload `.s9pk`           |
+| First start  | Run `phoenixd` manually         | Automatic via StartOS                                  |
+| API password | Generated in `phoenix.conf`     | Same — generated on first run, found in `phoenix.conf` |
 
 No setup wizard or admin account creation is needed. The server is ready to use after first start.
 
@@ -76,9 +76,9 @@ Configuration is done via the HTTP API or by editing config files directly in th
 
 ## Network Access and Interfaces
 
-| Interface | Port | Protocol | Type | Description |
-|-----------|------|----------|------|-------------|
-| Server API | 9740 | HTTP | api | HTTP API for wallet operations |
+| Interface  | Port | Protocol | Type | Description                    |
+| ---------- | ---- | -------- | ---- | ------------------------------ |
+| Server API | 9740 | HTTP     | api  | HTTP API for wallet operations |
 
 The API requires authentication using the HTTP password generated on first run (found in `phoenix.conf`).
 
@@ -107,8 +107,8 @@ None. All interaction is through the HTTP API.
 
 ## Health Checks
 
-| Check | Display | Method | Messages |
-|-------|---------|--------|----------|
+| Check          | Display          | Method                | Messages                                          |
+| -------------- | ---------------- | --------------------- | ------------------------------------------------- |
 | Primary daemon | "primary daemon" | Port listening (9740) | "The server is ready" / "The server is not ready" |
 
 ---
@@ -141,7 +141,7 @@ None. phoenixd connects directly to ACINQ's Lightning Service Provider (LSP) for
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for build instructions and development workflow.
+Build and development workflow follow the StartOS packaging guide: <https://docs.start9.com/packaging>. Keep `README.md`, `instructions.md`, and `AGENTS.md` in sync with any change to user-visible behavior or package structure.
 
 ---
 
