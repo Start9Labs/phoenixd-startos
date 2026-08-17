@@ -4,7 +4,8 @@ phoenixd is API-only — there is no web UI. You drive it from the **Server API*
 
 ## Documentation
 
-- [phoenixd server docs](https://phoenix.acinq.co/server) — the upstream operator guide: configuration, HTTP API reference, and `phoenix-cli` usage.
+- [phoenixd server docs](https://phoenix.acinq.co/server) — the upstream operator guide: configuration, `phoenix-cli` usage, and how channels and fees work.
+- [phoenixd HTTP API reference](https://phoenix.acinq.co/server/api) — every endpoint, its parameters, and the webhook payloads.
 
 ## What you get on StartOS
 
