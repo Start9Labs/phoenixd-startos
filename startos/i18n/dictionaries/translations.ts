@@ -29,7 +29,7 @@ export default {
     0: 'Démarrage de phoenixd !',
     1: 'démon principal',
     2: 'Le serveur est prêt',
-    3: 'Le serveur n\'est pas prêt',
+    3: "Le serveur n'est pas prêt",
     4: 'API du serveur',
     5: 'Votre API du serveur phoenixd',
   },
