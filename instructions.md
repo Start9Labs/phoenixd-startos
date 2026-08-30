@@ -4,6 +4,7 @@ phoenixd is API-only — there is no web UI. You drive it from the **Server API*
 
 ## Documentation
 
+- [Start9 Bitcoin Guides](https://docs.start9.com/bitcoin-guides/) — connecting wallets to a Lightning node on StartOS.
 - [phoenixd server docs](https://phoenix.acinq.co/server) — the upstream operator guide: configuration, `phoenix-cli` usage, and how channels and fees work.
 - [phoenixd HTTP API reference](https://phoenix.acinq.co/server/api) — every endpoint, its parameters, and the webhook payloads.
 
