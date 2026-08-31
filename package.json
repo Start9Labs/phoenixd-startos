@@ -6,7 +6,9 @@
     "check": "tsc --noEmit"
   },
   "dependencies": {
-    "@start9labs/start-sdk": "2.0.9"
+    "@start9labs/start-sdk": "2.0.9",
+    "electrs-startos": "github:Start9Labs/electrs-startos#next",
+    "fulcrum-startos": "github:Start9Labs/fulcrum-startos#next"
   },
   "devDependencies": {
     "@types/node": "^22.19.0",

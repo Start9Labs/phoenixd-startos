@@ -1,23 +1,33 @@
 import { IMPOSSIBLE, VersionInfo } from '@start9labs/start-sdk'
 
 export const current = VersionInfo.of({
-  version: '0.9.0:3',
+  version: '0.9.0:4',
   releaseNotes: {
-    en_US: `The HTTP API reference now has its own link.
+    en_US: `Adds three actions — Set API Password, Set Chain Source, and Set Liquidity Policy — covering the API credential, where phoenixd watches the blockchain from, and the caps on what it spends buying inbound liquidity from ACINQ.
 
-The Documentation section listed phoenixd's operator guide and said it covered the HTTP API. It doesn't — upstream keeps the endpoint reference on a separate page, which is now listed beside it. Since phoenixd has no web interface and that API is how you actually use it, it is worth a link of its own.`,
-    es_ES: `La referencia de la API HTTP ahora tiene su propio enlace.
+Set Chain Source can point phoenixd at Electrs or Fulcrum on this server instead of one of ACINQ's public servers.
 
-La sección de Documentación indicaba la guía del operador de phoenixd y decía que cubría la API HTTP. No es así: upstream mantiene la referencia de endpoints en una página aparte, que ahora aparece junto a ella. Como phoenixd no tiene interfaz web y esa API es la forma real de usarlo, merece un enlace propio.`,
-    de_DE: `Die HTTP-API-Referenz hat jetzt einen eigenen Link.
+A Node health check now reports the block height and how many channels are open.`,
+    es_ES: `Añade tres acciones —Establecer la contraseña de la API, Establecer la fuente de la cadena y Establecer la política de liquidez— que cubren la credencial de la API, desde dónde observa phoenixd la cadena de bloques y los límites de lo que gasta comprando liquidez entrante a ACINQ.
 
-Der Abschnitt Dokumentation nannte die Betriebsanleitung von phoenixd und behauptete, sie decke die HTTP-API ab. Das tut sie nicht — upstream führt die Endpunkt-Referenz auf einer eigenen Seite, die nun daneben aufgeführt ist. Da phoenixd keine Weboberfläche hat und diese API der eigentliche Weg zur Nutzung ist, verdient sie einen eigenen Link.`,
-    pl_PL: `Dokumentacja API HTTP ma teraz własny odnośnik.
+Establecer la fuente de la cadena puede apuntar phoenixd a Electrs o Fulcrum en este servidor en lugar de a un servidor público de ACINQ.
 
-Sekcja Dokumentacja podawała przewodnik operatora phoenixd i twierdziła, że obejmuje on API HTTP. Tak nie jest — upstream trzyma opis punktów końcowych na osobnej stronie, która teraz znajduje się obok. Ponieważ phoenixd nie ma interfejsu webowego, a to API jest faktycznym sposobem korzystania z niego, zasługuje na własny odnośnik.`,
-    fr_FR: `La référence de l'API HTTP a désormais son propre lien.
+Una comprobación de estado Nodo ahora informa de la altura del bloque y de cuántos canales hay abiertos.`,
+    de_DE: `Fügt drei Aktionen hinzu — API-Passwort setzen, Chain-Quelle setzen und Liquiditätsrichtlinie setzen — für die API-Zugangsdaten, den Ort, von dem phoenixd die Blockchain beobachtet, und die Obergrenzen für den Kauf eingehender Liquidität bei ACINQ.
 
-La section Documentation renvoyait au guide d'exploitation de phoenixd en affirmant qu'il couvrait l'API HTTP. Ce n'est pas le cas : en amont, la référence des points d'accès occupe une page distincte, désormais listée à côté. Comme phoenixd n'a pas d'interface web et que cette API est la façon réelle de s'en servir, elle mérite son propre lien.`,
+Chain-Quelle setzen kann phoenixd auf Electrs oder Fulcrum auf diesem Server richten statt auf einen öffentlichen Server von ACINQ.
+
+Eine Knoten-Zustandsprüfung meldet jetzt die Blockhöhe und die Zahl der offenen Kanäle.`,
+    pl_PL: `Dodaje trzy akcje — Ustaw hasło API, Ustaw źródło łańcucha i Ustaw politykę płynności — obejmujące poświadczenie API, miejsce, z którego phoenixd obserwuje łańcuch bloków, oraz limity wydatków na zakup płynności przychodzącej od ACINQ.
+
+Ustaw źródło łańcucha może skierować phoenixd na Electrs lub Fulcrum na tym serwerze zamiast na publiczny serwer ACINQ.
+
+Kontrola stanu Węzeł podaje teraz wysokość bloku i liczbę otwartych kanałów.`,
+    fr_FR: `Ajoute trois actions — Définir le mot de passe de l'API, Définir la source de la chaîne et Définir la politique de liquidité — couvrant l'identifiant de l'API, l'endroit d'où phoenixd observe la chaîne de blocs, et les plafonds de dépense pour l'achat de liquidité entrante auprès d'ACINQ.
+
+Définir la source de la chaîne peut pointer phoenixd vers Electrs ou Fulcrum sur ce serveur plutôt que vers un serveur public d'ACINQ.
+
+Un contrôle de santé Nœud indique désormais la hauteur de bloc et le nombre de canaux ouverts.`,
   },
   migrations: {
     up: async ({ effects }) => {},
