@@ -96,8 +96,8 @@ export const main = sdk.setupMain(async ({ effects }) => {
               message: i18n('Reaching the Electrum server'),
             }
 
-          // Params are stringified: setupI18n runs a number through Intl, which
-          // throws on the container's C.UTF-8 locale.
+          // Params are stringified: setupI18n in 2.0.9 runs a number through
+          // Intl, which throws on the container's C.UTF-8 locale.
           return channels.length
             ? {
                 result: 'success',
